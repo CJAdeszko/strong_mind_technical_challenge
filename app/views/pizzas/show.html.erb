@@ -1,0 +1,5 @@
+<h1><%= @pizza.name %></h1>
+<p><%= @pizza.toppings.map(&:name).join(', ') %></p>
+<%= link_to 'Edit Pizza', edit_pizza_path(@pizza), class: 'btn btn-primary', role: 'button', style: 'margin: 5px;' %>
+<%= button_to 'Delete Pizza', pizza_path(@pizza), method: :delete, class: 'btn btn-danger', role: 'button', style: 'margin: 5px;' %>
+<%= link_to 'Back to pizzas', pizzas_path, style: 'text-decoration: none; margin: 5px;' %>

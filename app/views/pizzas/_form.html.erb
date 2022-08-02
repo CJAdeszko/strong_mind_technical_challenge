@@ -1,0 +1,16 @@
+<%= form_with model: @pizza do |form| %>
+  <div>
+    <%= form.label :name %><br>
+    <%= form.text_field :name %>
+  </div>
+  <div>
+    <%= form.label :toppings %><br>
+    <% for topping in Topping.all %>
+      <%= check_box_tag "pizza[topping_ids][]", topping.id, @pizza.toppings.include?(topping) %>
+      <%= topping.name %><br>
+    <% end %>
+  </div>
+  <div>
+    <%= form.submit 'Submit', class: 'btn btn-primary' %>
+  </div>
+<% end %>

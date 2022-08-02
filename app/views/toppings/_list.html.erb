@@ -1,0 +1,9 @@
+<% @toppings.each do |topping| %>
+  <div>
+    <%= link_to topping_path(topping), style: 'text-decoration: none;' do %>
+      <div>
+        <h4 class="heading-span"><%= topping.name %></h4>
+      </div>
+    <% end %>
+  </div>
+<% end %>

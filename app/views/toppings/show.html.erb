@@ -1,0 +1,4 @@
+<h1><%= @topping.name %></h1>
+<%= link_to 'Edit Topping', edit_topping_path(@topping), class: 'btn btn-primary', role: 'button', style: 'margin: 5px;' %>
+<%= button_to 'Delete Topping', topping_path(@topping), method: :delete, class: 'btn btn-danger', role: 'button', style: 'margin: 5px;' %>
+<%= link_to 'Back to toppings', toppings_path, style: 'text-decoration: none; margin: 5px;' %>

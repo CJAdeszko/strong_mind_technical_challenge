@@ -1,0 +1,10 @@
+<% @pizzas.each do |pizza| %>
+  <div>
+    <%= link_to pizza_path(pizza), style: 'text-decoration: none;' do %>
+      <div>
+        <h4 class="heading-span"><%= pizza.name %></h4>
+        <p style='font-size: .9em; color: #343741;'><%= pizza.toppings.map(&:name).join(', ') %></p>
+      </div>
+    <% end %>
+  </div>
+<% end %>
